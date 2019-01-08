@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3C15DAF7B76160953CB0E78 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37069597F952238937BCDD6 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework */; };
 		AB956E9421E5511B0075102B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956E9321E5511B0075102B /* AppDelegate.swift */; };
 		AB956E9621E5511B0075102B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956E9521E5511B0075102B /* ViewController.swift */; };
 		AB956E9921E5511B0075102B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB956E9721E5511B0075102B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A103B92688ABB84F73FAC69A /* Pods-Shopify Mobile Challenge Winter 2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Mobile Challenge Winter 2019.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify Mobile Challenge Winter 2019/Pods-Shopify Mobile Challenge Winter 2019.debug.xcconfig"; sourceTree = "<group>"; };
 		AB956E9021E5511B0075102B /* Shopify Mobile Challenge Winter 2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopify Mobile Challenge Winter 2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB956E9321E5511B0075102B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB956E9521E5511B0075102B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		AB956E9A21E5511D0075102B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB956E9D21E5511D0075102B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB956E9F21E5511D0075102B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37069597F952238937BCDD6 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopify_Mobile_Challenge_Winter_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CD902587BD5AB2F5B197EA /* Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify Mobile Challenge Winter 2019/Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C15DAF7B76160953CB0E78 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EF14B9EA535250C09BB8F5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A103B92688ABB84F73FAC69A /* Pods-Shopify Mobile Challenge Winter 2019.debug.xcconfig */,
+				E1CD902587BD5AB2F5B197EA /* Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AB956E8721E5511B0075102B = {
 			isa = PBXGroup;
 			children = (
 				AB956E9221E5511B0075102B /* Shopify Mobile Challenge Winter 2019 */,
 				AB956E9121E5511B0075102B /* Products */,
+				6EF14B9EA535250C09BB8F5A /* Pods */,
+				BFB5D8D4FE96F913D6F30A33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "Shopify Mobile Challenge Winter 2019";
 			sourceTree = "<group>";
 		};
+		BFB5D8D4FE96F913D6F30A33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C37069597F952238937BCDD6 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB956EA221E5511D0075102B /* Build configuration list for PBXNativeTarget "Shopify Mobile Challenge Winter 2019" */;
 			buildPhases = (
+				52758F41907649E3E9807D51 /* [CP] Check Pods Manifest.lock */,
 				AB956E8C21E5511B0075102B /* Sources */,
 				AB956E8D21E5511B0075102B /* Frameworks */,
 				AB956E8E21E5511B0075102B /* Resources */,
+				0977925FD4FC8672B232392A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0977925FD4FC8672B232392A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shopify Mobile Challenge Winter 2019/Pods-Shopify Mobile Challenge Winter 2019-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shopify Mobile Challenge Winter 2019/Pods-Shopify Mobile Challenge Winter 2019-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52758F41907649E3E9807D51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shopify Mobile Challenge Winter 2019-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB956E8C21E5511B0075102B /* Sources */ = {
@@ -280,15 +345,13 @@
 		};
 		AB956EA321E5511D0075102B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A103B92688ABB84F73FAC69A /* Pods-Shopify Mobile Challenge Winter 2019.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7923SC2646;
 				INFOPLIST_FILE = "Shopify Mobile Challenge Winter 2019/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yucheng.Shopify-Mobile-Challenge-Winter-2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,15 +361,13 @@
 		};
 		AB956EA421E5511D0075102B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1CD902587BD5AB2F5B197EA /* Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7923SC2646;
 				INFOPLIST_FILE = "Shopify Mobile Challenge Winter 2019/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yucheng.Shopify-Mobile-Challenge-Winter-2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
