@@ -15,6 +15,6 @@ class CollectionListTableViewCellDataSource {
 	
 	init(collection: Collection) {
 		title = collection.title
-		image = nil
+		image = CollectionImageRepository.image(with: collection)
 	}
 }

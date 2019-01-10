@@ -19,6 +19,7 @@
 		AB956EB121E5A7700075102B /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EAF21E5A7700075102B /* CollectionListTableViewCell.swift */; };
 		AB956EB221E5A7700075102B /* CollectionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB956EB021E5A7700075102B /* CollectionListTableViewCell.xib */; };
 		AB956EB421E5AADC0075102B /* CollectionListTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EB321E5AADC0075102B /* CollectionListTableViewCellDataSource.swift */; };
+		AB956EB621E6D46A0075102B /* CollectionImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EB521E6D46A0075102B /* CollectionImageRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AB956EAF21E5A7700075102B /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
 		AB956EB021E5A7700075102B /* CollectionListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionListTableViewCell.xib; sourceTree = "<group>"; };
 		AB956EB321E5AADC0075102B /* CollectionListTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCellDataSource.swift; sourceTree = "<group>"; };
+		AB956EB521E6D46A0075102B /* CollectionImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImageRepository.swift; sourceTree = "<group>"; };
 		C37069597F952238937BCDD6 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopify_Mobile_Challenge_Winter_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CD902587BD5AB2F5B197EA /* Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify Mobile Challenge Winter 2019/Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				AB956E9F21E5511D0075102B /* Info.plist */,
 				AB956EA521E555110075102B /* ShopifyAPIRequester.swift */,
 				AB956EAF21E5A7700075102B /* CollectionListTableViewCell.swift */,
+				AB956EB521E6D46A0075102B /* CollectionImageRepository.swift */,
 				AB956EB021E5A7700075102B /* CollectionListTableViewCell.xib */,
 				AB956EA921E556970075102B /* Collection.swift */,
 			);
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB956EA621E555110075102B /* ShopifyAPIRequester.swift in Sources */,
+				AB956EB621E6D46A0075102B /* CollectionImageRepository.swift in Sources */,
 				AB956E9621E5511B0075102B /* CollectionListTableViewConstroller.swift in Sources */,
 				AB956E9421E5511B0075102B /* AppDelegate.swift in Sources */,
 				AB956EAC21E58A080075102B /* CollectionListTableViewDataSource.swift in Sources */,

@@ -28,11 +28,11 @@ class Collection {
 		title = (dataDict[Constants.titleKey] as? String) ?? ""
 		description = (dataDict[Constants.descriptionKey] as? String) ?? ""
 		
-		guard let parsedImageDict = dataDict[Constants.imageKey] as? Dictionary<String, AnyObject> else {
+		guard let parsedImageDict = dataDict[Constants.imageKey] as? Dictionary<String, AnyObject>, let unwrappedImageURL = parsedImageDict[Constants.urlKey] as? String else {
 			imageURL = ""
 			return
 		}
 		
-		imageURL = (parsedImageDict[Constants.urlKey] as? String) ?? ""
+		imageURL = unwrappedImageURL
 	}
 }

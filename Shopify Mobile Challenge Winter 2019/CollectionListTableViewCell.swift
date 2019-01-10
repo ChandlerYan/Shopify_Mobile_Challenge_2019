@@ -21,5 +21,6 @@ class CollectionListTableViewCell: UITableViewCell {
 	
 	func setup() {
 		titleLabel.text = dataSource?.title
+		thumbnailView.image = dataSource?.image
 	}
 }
