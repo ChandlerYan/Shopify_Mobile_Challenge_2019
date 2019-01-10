@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shopify Mobile Challenge Winter 2019/Collection.swift"
-            timestampString = "568784112.631495"
+            timestampString = "568791535.455176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shopify Mobile Challenge Winter 2019/CollectionListTableViewConstroller.swift"
-            timestampString = "568784112.631604"
+            timestampString = "568791535.455253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shopify Mobile Challenge Winter 2019/CollectionListTableViewConstroller.swift"
-            timestampString = "568784112.632278"
+            timestampString = "568791535.455318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shopify Mobile Challenge Winter 2019/CollectionListTableViewDataSource.swift"
-            timestampString = "568784112.6327699"
+            timestampString = "568791535.455382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "init(collections:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shopify Mobile Challenge Winter 2019/CollectionListTableViewDataSource.swift"
-            timestampString = "568784112.6328501"
+            timestampString = "568791535.455866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -90,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shopify Mobile Challenge Winter 2019/CollectionListTableViewConstroller.swift"
-            timestampString = "568784112.632917"
+            timestampString = "568791535.456187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shopify Mobile Challenge Winter 2019/CollectionImageRepository.swift"
+            timestampString = "568791535.456254"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "image(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

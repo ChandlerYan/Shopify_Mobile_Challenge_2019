@@ -9,16 +9,18 @@
 import Foundation
 
 class CollectionListTableViewDataSource {
-	private var collectionListTableCellDataSourceList: [CollectionListTableViewCellDataSource] = []
+	private let collectionListTableCellDataSourceList: [CollectionListTableViewCellDataSource]
 	
 	var collectionsCount: Int {
 		return collectionListTableCellDataSourceList.count
 	}
 	
 	init(collections: [Collection]) {
+		var collectionListTableCellDataSourceList: [CollectionListTableViewCellDataSource] = []
 		for collection in collections {
 			collectionListTableCellDataSourceList.append(CollectionListTableViewCellDataSource(collection: collection))
 		}
+		self.collectionListTableCellDataSourceList = collectionListTableCellDataSourceList
 	}
 	
 	func collectionListTableCellDataSource(for indexPath: IndexPath) -> CollectionListTableViewCellDataSource? {

@@ -49,5 +49,15 @@ class CollectionListTableViewConstroller: UITableViewController {
 	override public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return Constants.cellHeight
 	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		guard let id = dataSource?.collectionListTableCellDataSource(for: indexPath)?.id else {
+			return
+		}
+		
+		ShopifyAPIRequester.requestProducts(id: id) { products in
+			
+		}
+	}
 }
 

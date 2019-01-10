@@ -10,11 +10,15 @@ import Foundation
 import UIKit
 
 class CollectionListTableViewCellDataSource {
-	var title: String
-	var image: UIImage?
+	let id: String
+	let title: String
+	let image: UIImage?
 	
 	init(collection: Collection) {
+		id = collection.id
 		title = collection.title
 		image = CollectionImageRepository.image(with: collection)
 	}
+	
+	
 }

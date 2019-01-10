@@ -9,7 +9,7 @@
 import Foundation
 
 class Collection {
-	let id: Int64
+	let id: String
 	let title: String
 	let description: String
 	let imageURL: String
@@ -24,7 +24,7 @@ class Collection {
 	
 	init(dataDict: Dictionary<String, AnyObject>) {
 		
-		id = (dataDict[Constants.idKey] as? Int64) ?? 0
+		id = String((dataDict[Constants.idKey] as? Int64) ?? 0)
 		title = (dataDict[Constants.titleKey] as? String) ?? ""
 		description = (dataDict[Constants.descriptionKey] as? String) ?? ""
 		

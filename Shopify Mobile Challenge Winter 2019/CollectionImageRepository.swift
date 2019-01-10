@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class CollectionImageRepository {
-	static private var imageDictionary: Dictionary<Int64, UIImage> = Dictionary()
+	static private var imageDictionary: Dictionary<String, UIImage> = Dictionary()
 	
 	static func image(with collection: Collection) -> UIImage? {
 		let cachedImage = imageDictionary[collection.id]
