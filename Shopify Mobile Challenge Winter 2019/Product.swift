@@ -11,31 +11,39 @@ import Foundation
 class Product {
 	let name: String
 	let inventoryQuantities: [Int]
+	let productImageURL: String
 	
 	struct Constants {
 		static let titleKey = "title"
 		static let variantsKey = "variants"
 		static let inventoryQuantityKey = "inventory_quantity"
+		static let imageKey = "image"
+		static let urlKey = "src"
 	}
 	
 	init(dataDict: Dictionary<String, AnyObject>) {		
 		self.name = (dataDict[Constants.titleKey] as? String) ?? ""
 		
-		guard let variantDicts = dataDict[Constants.variantsKey] as? [Dictionary<String, AnyObject>] else {
-			self.inventoryQuantities = []
-			return
-		}
-		
-		var inventoryQuantities: [Int] = []
-		
-		for variantDict in variantDicts {
-			guard let inventoryQuantity = variantDict[Constants.inventoryQuantityKey] as? Int else {
-				continue
+		if let variantDicts = dataDict[Constants.variantsKey] as? [Dictionary<String, AnyObject>] {
+			var inventoryQuantities: [Int] = []
+			
+			for variantDict in variantDicts {
+				guard let inventoryQuantity = variantDict[Constants.inventoryQuantityKey] as? Int else {
+					continue
+				}
+				
+				inventoryQuantities.append(inventoryQuantity)
 			}
 			
-			inventoryQuantities.append(inventoryQuantity)
+			self.inventoryQuantities = inventoryQuantities
+		} else {
+			self.inventoryQuantities = []
 		}
 		
-		self.inventoryQuantities = inventoryQuantities
+		if let imageDict = dataDict[Constants.imageKey] as? Dictionary<String, AnyObject>, let imageURL = imageDict[Constants.urlKey] as? String {
+			self.productImageURL = imageURL
+		} else {
+			self.productImageURL = ""
+		}
 	}
 }

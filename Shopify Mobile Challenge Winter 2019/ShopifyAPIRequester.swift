@@ -40,7 +40,7 @@ class ShopifyAPIRequester {
 	}
 	
 	static func requestProducts(id: String, completion: (([Product])->())?) {
-		Alamofire.request(Constants.productsApiURL + id + Constants.suffixURL)
+		Alamofire.request(Constants.productsApiURL + id + "&" + Constants.suffixURL)
 			.responseJSON(completionHandler: { response in
 				switch response.result {
 				case .success(let content):
@@ -56,7 +56,7 @@ class ShopifyAPIRequester {
 						productsApiURL = productsApiURL + id + ","
 					}
 					
-					productsApiURL += Constants.suffixURL
+					productsApiURL = productsApiURL + "&" + Constants.suffixURL
 					
 					requestProductsDetails(url: productsApiURL, completion: completion)
 					
@@ -67,7 +67,7 @@ class ShopifyAPIRequester {
 	}
 	
 	static private func requestProductsDetails(url: String, completion: (([Product])->())?) {
-		Alamofire.request(Constants.collectionsApiURL)
+		Alamofire.request(url)
 			.responseJSON(completionHandler: { response in
 				switch response.result {
 				case .success(let content):

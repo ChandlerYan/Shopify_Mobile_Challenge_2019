@@ -13,6 +13,7 @@ class Collection {
 	let title: String
 	let description: String
 	let imageURL: String
+	var products: [Product]?
 	
 	struct Constants {
 		static let idKey = "id"

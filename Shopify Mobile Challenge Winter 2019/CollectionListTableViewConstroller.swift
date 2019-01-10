@@ -27,6 +27,8 @@ class CollectionListTableViewConstroller: UITableViewController {
 		self.title = Constants.title
 		
 		self.tableView.register(UINib(nibName: Constants.cellReusableIdentifier, bundle: nil), forCellReuseIdentifier: Constants.cellReusableIdentifier)
+		
+		self.tableView.rowHeight = Constants.cellHeight
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,18 +43,12 @@ class CollectionListTableViewConstroller: UITableViewController {
 		return cell
 	}
 	
-	override public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return Constants.cellHeight
-	}
-	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		guard let id = dataSource?.collectionListTableCellDataSource(for: indexPath)?.id else {
+		guard let cellDataSource = dataSource?.collectionListTableCellDataSource(for: indexPath), let navigator = self.navigationController else {
 			return
 		}
 		
-		ShopifyAPIRequester.requestProducts(id: id) { products in
-			
-		}
+		cellDataSource.presentProducts(navigator: navigator)
 	}
 }
 

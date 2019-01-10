@@ -10,15 +10,40 @@ import Foundation
 import UIKit
 
 class CollectionListTableViewCellDataSource {
-	let id: String
-	let title: String
-	let image: UIImage?
+	let collection: Collection
 	
-	init(collection: Collection) {
-		id = collection.id
-		title = collection.title
-		image = CollectionImageRepository.image(with: collection)
+	var id: String {
+		return collection.id
 	}
 	
+	var title: String {
+		return collection.title
+	}
 	
+	var image: UIImage? {
+		return CollectionImageRepository.image(with: collection)
+	}
+	
+	init(collection: Collection) {
+		self.collection = collection
+	}
+	
+	func presentProducts(navigator: UINavigationController) {
+		if let savedProducts = self.collection.products {
+			self.presentProductListTableViewController(navigator: navigator, products: savedProducts)
+			return
+		}
+		
+		ShopifyAPIRequester.requestProducts(id: self.collection.id) { [weak self] products in
+			guard let this = self else { return }
+			this.collection.products = products
+			this.presentProductListTableViewController(navigator: navigator, products: products)
+		}
+	}
+	
+	private func presentProductListTableViewController(navigator: UINavigationController, products: [Product]) {
+		let productListTableViewController = ProductListTableViewController()
+		productListTableViewController.dataSource = ProductListTableViewDataSource(collection: self.collection, products:products)
+		navigator.pushViewController(productListTableViewController, animated: true)
+	}
 }
