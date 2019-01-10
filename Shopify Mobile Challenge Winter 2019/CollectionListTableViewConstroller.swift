@@ -15,7 +15,7 @@ class CollectionListTableViewConstroller: UITableViewController {
 		static let cellReusableIdentifier = "CollectionListTableViewCell"
 	}
 	
-	private var dataSource: CollectionListTableViewDataSource? {
+	var dataSource: CollectionListTableViewDataSource? {
 		didSet {
 			self.tableView.reloadData()
 		}
@@ -25,11 +25,6 @@ class CollectionListTableViewConstroller: UITableViewController {
 		super.viewDidLoad()
 		
 		self.title = Constants.title
-		
-		ShopifyAPIRequester.requestCollections { [weak self] collections in
-			guard let this = self else { return }
-			this.dataSource = CollectionListTableViewDataSource(collections: collections)
-		}
 		
 		self.tableView.register(UINib(nibName: Constants.cellReusableIdentifier, bundle: nil), forCellReuseIdentifier: Constants.cellReusableIdentifier)
 	}

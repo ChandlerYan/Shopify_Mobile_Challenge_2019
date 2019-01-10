@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		
+		if let navigationConstroller = window?.rootViewController as? UINavigationController, let collectionListTableViewConstroller = navigationConstroller.topViewController as? CollectionListTableViewConstroller {
+			ShopifyAPIRequester.requestCollections { collections in
+				collectionListTableViewConstroller.dataSource = CollectionListTableViewDataSource(collections: collections)
+			}
+		}
+		
 		return true
 	}
 
