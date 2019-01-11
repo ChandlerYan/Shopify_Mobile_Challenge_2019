@@ -1,16 +1,20 @@
 //
-//  CollectionListTableViewCellDataSource.swift
+//  CollectionDetailTableViewCellDataSource.swift
 //  Shopify Mobile Challenge Winter 2019
 //
-//  Created by Yucheng Yan on 2019-01-08.
+//  Created by Yucheng Yan on 2019-01-11.
 //  Copyright © 2019 Yucheng Yan. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class CollectionListTableViewCellDataSource {
-	private let collection: Collection
+class CollectionDetailTableViewCellDataSource {
+	struct Constants {
+		static let noneDescription = "None"
+	}
+	
+	fileprivate let collection: Collection
 	
 	var id: String {
 		return collection.id
@@ -20,6 +24,11 @@ class CollectionListTableViewCellDataSource {
 		return collection.title
 	}
 	
+	var description: String {
+		let description = collection.description
+		return description == "" ? Constants.noneDescription : description
+	}
+	
 	var image: UIImage? {
 		return ImageRepository.image(with: collection)
 	}
@@ -27,7 +36,9 @@ class CollectionListTableViewCellDataSource {
 	init(collection: Collection) {
 		self.collection = collection
 	}
-	
+}
+
+class CollectionListTableViewCellDataSource: CollectionDetailTableViewCellDataSource {
 	func presentProducts(navigator: UINavigationController) {
 		if let savedProducts = self.collection.products {
 			self.presentProductListTableViewController(navigator: navigator, products: savedProducts)
@@ -47,3 +58,4 @@ class CollectionListTableViewCellDataSource {
 		navigator.pushViewController(productListTableViewController, animated: true)
 	}
 }
+

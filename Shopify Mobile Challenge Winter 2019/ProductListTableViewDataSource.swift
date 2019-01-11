@@ -32,6 +32,10 @@ class ProductListTableViewDataSource {
 	
 	func productListTableViewCellDataSource(for indexPath: IndexPath) -> ProductListTableViewCellDataSource? {
 		let row = indexPath.row
-		return row >= productsCount ? nil : productListTableViewCellDataSourceList[row]
+		return row > productsCount ? nil : productListTableViewCellDataSourceList[row - 1]
+	}
+	
+	func collectionDetailTableViewCellDataSource() -> CollectionDetailTableViewCellDataSource {
+		return CollectionDetailTableViewCellDataSource(collection: self.collection)
 	}
 }

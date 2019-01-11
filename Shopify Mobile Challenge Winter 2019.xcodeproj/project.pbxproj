@@ -17,7 +17,6 @@
 		AB956EAC21E58A080075102B /* CollectionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EAB21E58A080075102B /* CollectionListTableViewDataSource.swift */; };
 		AB956EB121E5A7700075102B /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EAF21E5A7700075102B /* CollectionListTableViewCell.swift */; };
 		AB956EB221E5A7700075102B /* CollectionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB956EB021E5A7700075102B /* CollectionListTableViewCell.xib */; };
-		AB956EB421E5AADC0075102B /* CollectionListTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EB321E5AADC0075102B /* CollectionListTableViewCellDataSource.swift */; };
 		AB956EB621E6D46A0075102B /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EB521E6D46A0075102B /* ImageRepository.swift */; };
 		AB956EB821E6F8AB0075102B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EB721E6F8AB0075102B /* Product.swift */; };
 		AB956EBA21E7D9730075102B /* ProductListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EB921E7D9730075102B /* ProductListTableViewDataSource.swift */; };
@@ -25,6 +24,9 @@
 		AB956EBF21E84AB00075102B /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EBD21E84AB00075102B /* ProductListTableViewCell.swift */; };
 		AB956EC021E84AB00075102B /* ProductListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB956EBE21E84AB00075102B /* ProductListTableViewCell.xib */; };
 		AB956EC221E851030075102B /* ProductListTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EC121E851030075102B /* ProductListTableViewCellDataSource.swift */; };
+		AB956EC521E94EEC0075102B /* CollectionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EC321E94EEC0075102B /* CollectionDetailTableViewCell.swift */; };
+		AB956EC621E94EEC0075102B /* CollectionDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB956EC421E94EEC0075102B /* CollectionDetailTableViewCell.xib */; };
+		AB956EC821E951AE0075102B /* CollectionDetailTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB956EC721E951AE0075102B /* CollectionDetailTableViewCellDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,6 @@
 		AB956EAB21E58A080075102B /* CollectionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewDataSource.swift; sourceTree = "<group>"; };
 		AB956EAF21E5A7700075102B /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
 		AB956EB021E5A7700075102B /* CollectionListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionListTableViewCell.xib; sourceTree = "<group>"; };
-		AB956EB321E5AADC0075102B /* CollectionListTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCellDataSource.swift; sourceTree = "<group>"; };
 		AB956EB521E6D46A0075102B /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		AB956EB721E6F8AB0075102B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AB956EB921E7D9730075102B /* ProductListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -48,6 +49,9 @@
 		AB956EBD21E84AB00075102B /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
 		AB956EBE21E84AB00075102B /* ProductListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListTableViewCell.xib; sourceTree = "<group>"; };
 		AB956EC121E851030075102B /* ProductListTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCellDataSource.swift; sourceTree = "<group>"; };
+		AB956EC321E94EEC0075102B /* CollectionDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AB956EC421E94EEC0075102B /* CollectionDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionDetailTableViewCell.xib; sourceTree = "<group>"; };
+		AB956EC721E951AE0075102B /* CollectionDetailTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailTableViewCellDataSource.swift; sourceTree = "<group>"; };
 		C37069597F952238937BCDD6 /* Pods_Shopify_Mobile_Challenge_Winter_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopify_Mobile_Challenge_Winter_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CD902587BD5AB2F5B197EA /* Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify Mobile Challenge Winter 2019/Pods-Shopify Mobile Challenge Winter 2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,12 +104,14 @@
 				AB956EBB21E7FDC70075102B /* ProductListTableViewController.swift */,
 				AB956EBD21E84AB00075102B /* ProductListTableViewCell.swift */,
 				AB956EBE21E84AB00075102B /* ProductListTableViewCell.xib */,
+				AB956EC321E94EEC0075102B /* CollectionDetailTableViewCell.swift */,
+				AB956EC421E94EEC0075102B /* CollectionDetailTableViewCell.xib */,
 				AB956EAF21E5A7700075102B /* CollectionListTableViewCell.swift */,
 				AB956EB021E5A7700075102B /* CollectionListTableViewCell.xib */,
 				AB956EAB21E58A080075102B /* CollectionListTableViewDataSource.swift */,
-				AB956EB321E5AADC0075102B /* CollectionListTableViewCellDataSource.swift */,
 				AB956EB921E7D9730075102B /* ProductListTableViewDataSource.swift */,
 				AB956EC121E851030075102B /* ProductListTableViewCellDataSource.swift */,
+				AB956EC721E951AE0075102B /* CollectionDetailTableViewCellDataSource.swift */,
 				AB956EA521E555110075102B /* ShopifyAPIRequester.swift */,
 				AB956EB521E6D46A0075102B /* ImageRepository.swift */,
 				AB956EA921E556970075102B /* Collection.swift */,
@@ -188,6 +194,7 @@
 				AB956E9B21E5511D0075102B /* Assets.xcassets in Resources */,
 				AB956E9921E5511B0075102B /* Main.storyboard in Resources */,
 				AB956EB221E5A7700075102B /* CollectionListTableViewCell.xib in Resources */,
+				AB956EC621E94EEC0075102B /* CollectionDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB956EC821E951AE0075102B /* CollectionDetailTableViewCellDataSource.swift in Sources */,
+				AB956EC521E94EEC0075102B /* CollectionDetailTableViewCell.swift in Sources */,
 				AB956EBA21E7D9730075102B /* ProductListTableViewDataSource.swift in Sources */,
 				AB956EA621E555110075102B /* ShopifyAPIRequester.swift in Sources */,
 				AB956EB621E6D46A0075102B /* ImageRepository.swift in Sources */,
@@ -246,7 +255,6 @@
 				AB956E9421E5511B0075102B /* AppDelegate.swift in Sources */,
 				AB956EAC21E58A080075102B /* CollectionListTableViewDataSource.swift in Sources */,
 				AB956EC221E851030075102B /* ProductListTableViewCellDataSource.swift in Sources */,
-				AB956EB421E5AADC0075102B /* CollectionListTableViewCellDataSource.swift in Sources */,
 				AB956EAA21E556970075102B /* Collection.swift in Sources */,
 				AB956EBC21E7FDC70075102B /* ProductListTableViewController.swift in Sources */,
 				AB956EB121E5A7700075102B /* CollectionListTableViewCell.swift in Sources */,

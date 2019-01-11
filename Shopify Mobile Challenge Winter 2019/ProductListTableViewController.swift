@@ -15,6 +15,7 @@ class ProductListTableViewController: UITableViewController {
 	struct Constants {
 		static let cellHeight: CGFloat    = 100
 		static let cellReusableIdentifier = "ProductListTableViewCell"
+		static let collectionDetailCellReusableIdentifier = "CollectionDetailTableViewCell"
 	}
 	
 	var dataSource: ProductListTableViewDataSource? {
@@ -29,6 +30,8 @@ class ProductListTableViewController: UITableViewController {
 		self.title = dataSource?.collectionTitle
 		
 		self.tableView.register(UINib(nibName: Constants.cellReusableIdentifier, bundle: nil), forCellReuseIdentifier: Constants.cellReusableIdentifier)
+		self.tableView.register(UINib(nibName: Constants.collectionDetailCellReusableIdentifier, bundle: nil), forCellReuseIdentifier: Constants.collectionDetailCellReusableIdentifier)
+		
 		self.tableView.estimatedRowHeight = Constants.cellHeight
 	}
 	
@@ -37,6 +40,14 @@ class ProductListTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if indexPath.row == 0 {
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.collectionDetailCellReusableIdentifier, for: indexPath) as? CollectionDetailTableViewCell else {
+				return UITableViewCell()
+			}
+			cell.dataSource = self.dataSource?.collectionDetailTableViewCellDataSource()
+			return cell
+		}
+		
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as? ProductListTableViewCell else {
 			return UITableViewCell()
 		}

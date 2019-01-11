@@ -29,8 +29,4 @@ class ProductListTableViewCell: UITableViewCell {
 		totalInventoryLabel.text = Constants.totalInventoryPrefix + String(unwrappedDataSource.totalInventory)
 		productImageView.image = unwrappedDataSource.image
 	}
-	
-	override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }
