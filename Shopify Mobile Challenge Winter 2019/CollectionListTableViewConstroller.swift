@@ -39,12 +39,12 @@ class CollectionListTableViewConstroller: UITableViewController {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as? CollectionListTableViewCell else {
 			return UITableViewCell()
 		}
-		cell.dataSource = self.dataSource?.collectionListTableCellDataSource(for: indexPath)
+		cell.dataSource = self.dataSource?.collectionListTableViewCellDataSource(for: indexPath)
 		return cell
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		guard let cellDataSource = dataSource?.collectionListTableCellDataSource(for: indexPath), let navigator = self.navigationController else {
+		guard let cellDataSource = dataSource?.collectionListTableViewCellDataSource(for: indexPath), let navigator = self.navigationController else {
 			return
 		}
 		

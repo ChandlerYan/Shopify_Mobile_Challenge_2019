@@ -9,22 +9,22 @@
 import Foundation
 
 class CollectionListTableViewDataSource {
-	private let collectionListTableCellDataSourceList: [CollectionListTableViewCellDataSource]
+	private let collectionListTableViewCellDataSourceList: [CollectionListTableViewCellDataSource]
 	
 	var collectionsCount: Int {
-		return collectionListTableCellDataSourceList.count
+		return collectionListTableViewCellDataSourceList.count
 	}
 	
 	init(collections: [Collection]) {
-		var collectionListTableCellDataSourceList: [CollectionListTableViewCellDataSource] = []
+		var collectionListTableViewCellDataSourceList: [CollectionListTableViewCellDataSource] = []
 		for collection in collections {
-			collectionListTableCellDataSourceList.append(CollectionListTableViewCellDataSource(collection: collection))
+			collectionListTableViewCellDataSourceList.append(CollectionListTableViewCellDataSource(collection: collection))
 		}
-		self.collectionListTableCellDataSourceList = collectionListTableCellDataSourceList
+		self.collectionListTableViewCellDataSourceList = collectionListTableViewCellDataSourceList
 	}
 	
-	func collectionListTableCellDataSource(for indexPath: IndexPath) -> CollectionListTableViewCellDataSource? {
+	func collectionListTableViewCellDataSource(for indexPath: IndexPath) -> CollectionListTableViewCellDataSource? {
 		let row = indexPath.row
-		return row >= collectionsCount ? nil : collectionListTableCellDataSourceList[row]
+		return row >= collectionsCount ? nil : collectionListTableViewCellDataSourceList[row]
 	}
 }

@@ -9,11 +9,29 @@
 import Foundation
 
 class ProductListTableViewDataSource {
-	let collection: Collection
-	let products: [Product]
+	private let collection: Collection	
+	private let productListTableViewCellDataSourceList: [ProductListTableViewCellDataSource]
+	
+	var collectionTitle: String {
+		return collection.title
+	}
+	
+	var productsCount: Int {
+		return productListTableViewCellDataSourceList.count
+	}
 	
 	init(collection: Collection, products: [Product]) {
 		self.collection = collection
-		self.products = products
+		
+		var productListTableViewCellDataSourceList: [ProductListTableViewCellDataSource] = []
+		for product in products {
+			productListTableViewCellDataSourceList.append(ProductListTableViewCellDataSource(product: product))
+		}
+		self.productListTableViewCellDataSourceList = productListTableViewCellDataSourceList
+	}
+	
+	func productListTableViewCellDataSource(for indexPath: IndexPath) -> ProductListTableViewCellDataSource? {
+		let row = indexPath.row
+		return row >= productsCount ? nil : productListTableViewCellDataSourceList[row]
 	}
 }

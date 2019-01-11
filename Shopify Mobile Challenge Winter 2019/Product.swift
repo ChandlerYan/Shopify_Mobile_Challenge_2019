@@ -9,11 +9,13 @@
 import Foundation
 
 class Product {
+	let id: String
 	let name: String
 	let inventoryQuantities: [Int]
-	let productImageURL: String
+	let imageURL: String
 	
 	struct Constants {
+		static let idKey = "id"
 		static let titleKey = "title"
 		static let variantsKey = "variants"
 		static let inventoryQuantityKey = "inventory_quantity"
@@ -21,7 +23,8 @@ class Product {
 		static let urlKey = "src"
 	}
 	
-	init(dataDict: Dictionary<String, AnyObject>) {		
+	init(dataDict: Dictionary<String, AnyObject>) {
+		self.id = String((dataDict[Constants.idKey] as? Int64) ?? 0)
 		self.name = (dataDict[Constants.titleKey] as? String) ?? ""
 		
 		if let variantDicts = dataDict[Constants.variantsKey] as? [Dictionary<String, AnyObject>] {
@@ -41,9 +44,9 @@ class Product {
 		}
 		
 		if let imageDict = dataDict[Constants.imageKey] as? Dictionary<String, AnyObject>, let imageURL = imageDict[Constants.urlKey] as? String {
-			self.productImageURL = imageURL
+			self.imageURL = imageURL
 		} else {
-			self.productImageURL = ""
+			self.imageURL = ""
 		}
 	}
 }

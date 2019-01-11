@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 
 class ProductListTableViewController: UITableViewController {
+	
+	
 	struct Constants {
-		static let title                  = "Product List"
 		static let cellHeight: CGFloat    = 100
-		static let cellReusableIdentifier = "CollectionListTableViewCell"
+		static let cellReusableIdentifier = "ProductListTableViewCell"
 	}
 	
 	var dataSource: ProductListTableViewDataSource? {
@@ -25,10 +26,21 @@ class ProductListTableViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.title = Constants.title
+		self.title = dataSource?.collectionTitle
 		
 		self.tableView.register(UINib(nibName: Constants.cellReusableIdentifier, bundle: nil), forCellReuseIdentifier: Constants.cellReusableIdentifier)
-		
-		self.tableView.rowHeight = Constants.cellHeight
+		self.tableView.estimatedRowHeight = Constants.cellHeight
+	}
+	
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return dataSource?.productsCount ?? 0
+	}
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as? ProductListTableViewCell else {
+			return UITableViewCell()
+		}
+		cell.dataSource = self.dataSource?.productListTableViewCellDataSource(for: indexPath)
+		return cell
 	}
 }

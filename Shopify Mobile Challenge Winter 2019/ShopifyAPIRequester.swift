@@ -13,8 +13,9 @@ class ShopifyAPIRequester {
 	private struct Constants {
 		static let suffixURL = "page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
 		static let collectionsApiURL = "https://shopicruit.myshopify.com/admin/custom_collections.json?" + Constants.suffixURL
-		static let productsApiURL = "https://shopicruit.myshopify.com/admin/collects.json?collection_id="
-		static let idKey = "id"
+		static let productListApiURL = "https://shopicruit.myshopify.com/admin/collects.json?collection_id="
+		static let productsApiURL = "https://shopicruit.myshopify.com/admin/products.json?ids="
+		static let productIdKey = "product_id"
 	}
 	
 	static func requestCollections(completion: (([Collection])->())?) {
@@ -40,7 +41,7 @@ class ShopifyAPIRequester {
 	}
 	
 	static func requestProducts(id: String, completion: (([Product])->())?) {
-		Alamofire.request(Constants.productsApiURL + id + "&" + Constants.suffixURL)
+		Alamofire.request(Constants.productListApiURL + id + "&" + Constants.suffixURL)
 			.responseJSON(completionHandler: { response in
 				switch response.result {
 				case .success(let content):
@@ -49,11 +50,11 @@ class ShopifyAPIRequester {
 					var productsApiURL = Constants.productsApiURL
 					
 					for product in productDicts {
-						guard let id = product[Constants.idKey] as? String else {
+						guard let id = product[Constants.productIdKey] as? Int64 else {
 							continue
 						}
 						
-						productsApiURL = productsApiURL + id + ","
+						productsApiURL = productsApiURL + String(id) + ","
 					}
 					
 					productsApiURL = productsApiURL + "&" + Constants.suffixURL

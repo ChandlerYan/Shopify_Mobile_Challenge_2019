@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class CollectionListTableViewCellDataSource {
-	let collection: Collection
+	private let collection: Collection
 	
 	var id: String {
 		return collection.id
@@ -21,7 +21,7 @@ class CollectionListTableViewCellDataSource {
 	}
 	
 	var image: UIImage? {
-		return CollectionImageRepository.image(with: collection)
+		return ImageRepository.image(with: collection)
 	}
 	
 	init(collection: Collection) {
