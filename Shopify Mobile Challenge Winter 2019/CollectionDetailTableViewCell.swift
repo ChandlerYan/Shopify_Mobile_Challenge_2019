@@ -11,7 +11,7 @@ import UIKit
 class CollectionDetailTableViewCell: UITableViewCell {
 	
 	struct Constants {
-		static let descriptionPrefix = "Collection Description: "
+		static let descriptionPrefix = "Collection Description: \n"
 	}
 	
 	@IBOutlet weak var collectionImageView: UIImageView!
